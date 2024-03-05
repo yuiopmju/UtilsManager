@@ -1,0 +1,4 @@
+name: UtilsManager
+version: '${project.version}'
+main: me.cosmodev.Plugin
+api-version: '1.16'
