@@ -12,8 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Menu {
-    public final static List<Menu> menus = new ArrayList<>();
+public class Menu_old {
+    public final static List<Menu_old> MENU_OLDS = new ArrayList<>();
     private String title;
     private int size;
     private List<Button> buttons = new ArrayList<>();
@@ -21,16 +21,16 @@ public class Menu {
     private Inventory inventory;
     private static final HashMap<String, Inventory> viewers = new HashMap<>();
 
-    public static Menu create(String title, int size){
-        menus.add(new Menu(title, size));
+    public static Menu_old create(String title, int size){
+        MENU_OLDS.add(new Menu_old(title, size));
 
-        return menus.get(menus.size() - 1);
+        return MENU_OLDS.get(MENU_OLDS.size() - 1);
     }
     @Nullable
-    public static Menu getMenuBy(Inventory inventory){
-        for(Menu menu: menus){
-            if(menu.inventory == inventory){
-                return menu;
+    public static Menu_old getMenuBy(Inventory inventory){
+        for(Menu_old menuOld : MENU_OLDS){
+            if(menuOld.inventory == inventory){
+                return menuOld;
             }
         }
 
@@ -38,7 +38,7 @@ public class Menu {
     }
 
 
-    private Menu(String title, int size) {
+    private Menu_old(String title, int size) {
         this.title = title;
         this.size = size;
 
